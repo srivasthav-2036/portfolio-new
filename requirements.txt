@@ -1,2 +1,4 @@
 Flask==2.3.3
 gunicorn==21.2.0
+json=2.0.9
+flask_mail==2.0.1
