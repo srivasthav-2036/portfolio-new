@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="certificates-section">
+    <h1 class="cert-title" data-aos="fade-down">My Certificates</h1>
+
+    <div class="cert-grid">
+        <!-- Certificate Cards -->
+        <div class="cert-card" onclick="openModal('/static/Certificates/ML_Kaggle.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Machine Learning - Kaggle</h3>
+            <p>Completed Machine Learning course from Udemy. Gained insights by solving Real-World problems from Kaggle.</p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/lc badge 2025.png','/static/Certificates/Leetcode badge.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>LeetCode badges</h3>
+            <p>Solved 220+ problems on LeetCode and received 50 days badge in the year 2024 & 2025</p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/kgp.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>IIT KHARAGPUR ML Hackathon</h3>
+            <p>Succesfully participated and qualified for 2nd round Machine Learning Hackathon conducted by "COMPOSIT" organised by IIT KHARAGPUR </p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/VNR_Coding_Comp.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Winter coding contest 4.0</h3>
+            <p>Participated as a team "WE2" and got qualified for 2nd round in winter coding contest organised by Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology formely (VJIET)</p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/python certificate.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Python HackerRank Skill assessment</h3>
+            <p>Certified by HackerRank for successfully clearing Python Skill Assessment</p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/pbsolving.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Problem Solving HackerRank Skill assessment</h3>
+            <p>Successfully cleared Python skill assessment and certified by HackerRank</p>
+        </div>
+        <div class="cert-card" onclick="openModal('/static/Certificates/ICPC Coding.png')" data-aos="zoom-in" data-aos-delay="100">
+            <h3>ICPC Style Coding Challenge </h3>
+            <p>Participated as team "codeAnonymous" in Algorithmia: The ICPC Style Coding Challenge conducted by "TantraFiesta'24" organised by Indian Institute of Information Technology (IIIT), Nagpur. </p>
+        </div>
+
+
+
+    </div>
+
+    <div id="certModal" class="cert-modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="certModalContent" class="cert-modal-content"></div>
+    </div>
+      
+</section>
+
+  
+{% endblock %}

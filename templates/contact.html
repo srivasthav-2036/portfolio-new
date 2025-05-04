@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="contact-section" data-aos="fade-up">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaboration or any questions!</p>
+
+    <form class="contact-form" action="/sendmessage" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit"><span>Send Message</span></button>
+    </form>
+
+    <div class="contact-info">
+      <p><i class=" bi-envelope-fill"></i> srivasthav.thatikonda@gmail.com</p>
+      <p><i class="bi bi-phone-fill"></i> +91 8897806750</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

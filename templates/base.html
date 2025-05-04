@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="/static/Images/hamburger-icon.png " class="hamburger" onclick="toggleMenu()" alt="Menu">
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skills">Skills</a>
+        <a href="/mycertificates">Certificates</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+
+  {% block content %}{% endblock %}
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+    
+
+
+    AOS.init({
+      duration: 800,         // speed of animation
+      once: true,            // animate only once
+      offset: 100,           // trigger a bit earlier
+      easing: 'ease-in-out', // smoother animation
+      disable: false         // ensures mobile devices animate
+    });
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: 'ease-in-out',
+      once: false, // allow animation more than once
+      disable: false // keep animations enabled for mobile
+    });
+    
+
+    // Force re-init after load to animate things already in view
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        AOS.refresh();
+      }, 100); // small delay to ensure layout settles
+    });
+</script>
+
+
+
+<script>
+  function openModal(...sources) {
+  const modal = document.getElementById("certModal");
+  const modalContent = document.getElementById("certModalContent");
+  modalContent.innerHTML = '';
+
+  sources.forEach(src => {
+    if (src.endsWith('.pdf')) {
+      const iframe = document.createElement("iframe");
+      iframe.src = src;
+      iframe.className = "modal-pdf";
+      modalContent.appendChild(iframe);
+    } else if (src.endsWith('.mp4')) {
+      const video = document.createElement("video");
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.className = "modal-img";
+      modalContent.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "modal-img";
+      modalContent.appendChild(img);
+    }
+  });
+
+  modal.style.display = "block";
+}
+
+
+  function closeModal() {
+    document.getElementById("certModal").style.display = "none";
+  }
+</script>
+
+
+</body>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="social-icons">
+      <a href="https://github.com/srivasthav-2036" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/srivasthav-t-2036m/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:srivasthav.thatikonda@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+    <p class="copyright">© 2025 <span>Srivasthav T</span>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</html>
+
+
+
+

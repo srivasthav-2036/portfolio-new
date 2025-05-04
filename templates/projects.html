@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="projects-section">
+  <h1 class="section-title" data-aos="zoom-out">Projects</h1>
+
+  <!-- Project 1 -->
+  <div class="project-row" data-aos="fade-right">
+    <img src="/static/Images/Handgesture_img.png" alt="Project 1" class="project-image">
+    <div class="project-info">
+      <h2>AI Cursor</h2>
+      <p>A smart cursor using AI models that tracks gaze and reacts to hand gestures. Built with Python, OpenCV & MediaPipe.</p>
+      <div class="project-buttons">
+        <a href="https://github.com/srivasthav-2036/gesture-mouse-control" target="_blank">GitHub</a>
+        <a href="#" onclick="openModal('/static/videos/AI Cursor Demo.mp4'); return false;" target="_blank">Demo</a>        
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-row reverse" data-aos="fade-left">
+    <img src="/static/Images/portfolio_img.png" alt="Project 2" class="project-image">
+    <div class="project-info">
+      <h2>Portfolio Website</h2>
+      <p>Creative and responsive personal portfolio built with Flask, HTML, CSS and AOS animations.</p>
+      <div class="project-buttons">
+        <a href="https://github.com/srivasthav-2036/portfolio-new" target="_blank">GitHub</a>
+        <a href="https://portfolio-srivasthav.onrender.com" target="_blank">Live Site</a>
+      </div>
+    </div>
+  </div>
+  <!-- project 3 -->
+  <div class="project-row " data-aos="fade-right">
+    <img src="/static/Images/MLmodel_img.png" alt="Project 3" class="project-image">
+    <div class="project-info">
+      <h2>Perovskite PBE band gap prediction and classification of insulators</h2>
+      <p>Developed and optimized a Random Forest Regression model to predict PBE band gap of insulating materials using a custom dataset.Developed a XGBoost model to classify insulators from structured dataset</p>
+      <div class="project-buttons">
+        <a href="https://github.com/srivasthav-2036/bandgap-prediction-perovskites" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="certModal" class="cert-modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div id="certModalContent" class="cert-modal-content"></div>
+  </div>
+
+</section>
+{% endblock %}

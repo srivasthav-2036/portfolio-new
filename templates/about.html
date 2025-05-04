@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="about-section">
+  <div class="about-content" data-aos="fade-up">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        Hey there! I'm a passionate Computer Science student specializing in AI & ML. 
+        I love building intelligent systems, exploring the power of deep learning, 
+        and crafting beautiful full-stack web apps.
+      </p>
+      <p>
+        "Every line of code I write is fueled by curiosity and ambition. From crafting AI-based tools to cracking 220+ LeetCode problems, I strive to innovate, learn, and inspire through everything I build."
+      </p>
+      <br><br>
+      <ul class="highlights">
+        <li><strong>B.Tech (CSE - AI & ML):</strong> Jawaharlal Nehru Technological University, Hyderabad (JNTUH)</li>
+        <li><strong>Class 11 & 12:</strong> Aakash Institute, Hyderabad</li>
+        <li><strong>Class 10:</strong> Sri Chaitanya School, Hyderabad</li>
+        <li><strong>My Location:</strong> Hyderabad, India</li>
+      </ul>
+      <br>
+      <!-- Resume Button -->
+      <div class="resume-buttons">
+        <a href="#" class="cta-button" onclick="openModal('/static/Resume/Resume-Srivasthav_page-1.jpg','/static/Resume/Resume-Srivasthav_page-2.jpg')" >View Resume</a>
+        <a href="/static/Resume/Resume-Srivasthav.pdf" class="cta-button" download="Resume-Srivasthav.pdf">Download Resume</a>
+      </div>
+
+    </div>
+
+    <div class="about-img" data-aos="zoom-out">
+      <img src="/static/Images/myimg2.JPG" alt="Your Photo">
+    </div>
+  </div>
+
+  <!-- Modal for Resume -->
+  <div id="certModal" class="cert-modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div id="certModalContent" class="cert-modal-content"></div>
+  </div>
+</section>
+
+{% endblock %}
