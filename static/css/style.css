@@ -53,8 +53,7 @@ nav a {
   padding: 0.5rem 0.75rem;
 }
 
-<<<<<<< HEAD
-=======
+
 /* new */
 nav a::after {
   content: '';
@@ -85,7 +84,6 @@ nav a {
 }
 
 
->>>>>>> 16d7586 (Update CSS and base.html to indicate the current page to users)
 /* === MOBILE MENU === */
 @media (max-width: 768px) {
   .hamburger {
