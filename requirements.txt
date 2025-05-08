@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Flask==2.3.2
 Flask-Mail==0.9.1
 gunicorn==20.1.0     
+=======
+Flask==2.3.3
+gunicorn==21.2.0
+flask_mail==2.0.1
+>>>>>>> 16d7586 (Update CSS and base.html to indicate the current page to users)

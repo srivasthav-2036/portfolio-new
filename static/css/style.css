@@ -53,6 +53,39 @@ nav a {
   padding: 0.5rem 0.75rem;
 }
 
+<<<<<<< HEAD
+=======
+/* new */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  color: #38bdf8;
+  background-color: #38bdf8; /* underline color */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active::after {
+
+  width: 100%;
+}
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+
+>>>>>>> 16d7586 (Update CSS and base.html to indicate the current page to users)
 /* === MOBILE MENU === */
 @media (max-width: 768px) {
   .hamburger {
