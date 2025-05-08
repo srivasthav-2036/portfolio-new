@@ -76,7 +76,4 @@ def send_message():
 
 if __name__ == '__main__':
     app.run(debug=True)
-<<<<<<< HEAD
-=======
 
->>>>>>> 16d7586 (Update CSS and base.html to indicate the current page to users)
