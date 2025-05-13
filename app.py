@@ -25,8 +25,6 @@ def about():
 
 @app.route('/projects')
 def projects():
-    with open('data/projects.json') as f:
-        projects = json.load(f)
     return render_template('projects.html', projects=projects)
 
 
